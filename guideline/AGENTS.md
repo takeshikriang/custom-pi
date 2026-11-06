@@ -17,11 +17,57 @@ Exception: these are allowed only when the user explicitly instructs it.
 
 ## Code guidelines
 - Keep It Simple Stupid (KISS)
-- Prefer undefined over null
 - Prefer async/await over promise chains, but avoid nested async/await blocks
-- Prefer interfaces over type aliases for object shapes
 - Never add junk comments (e.g. restating the code, narrating changes, redundant docstrings)
 - Explicitly declare brackets for switch/case blocks
+
+## TypeScript guidelines
+- Prefer interface over type for object shape
+Example:
+```ts
+// Do
+interface MyInterface {
+  firstName: string
+  lastName: string
+}
+// Don't
+type MyType = {
+  firstName: string
+  lastName: string
+}
+```
+
+- Prefer undefined over null
+Example:
+```ts
+// Do
+interface MyInterface {
+  firstName: string
+  lastName: string | undefined
+}
+
+// Don't
+interface MyInterface {
+  firstName: string
+  lastName: string | null
+}
+```
+
+- Explicitly declare `undefined` for optional parameters instead of using `?` syntax
+Example:
+```ts
+// Do
+interface MyInterface {
+  firstName: string
+  lastName: string | undefined
+}
+
+// Don't
+interface MyInterface {
+  firstName: string
+  lastName?: string
+}
+```
 
 ## Import sorting guidelines
 - First external module imports, Second internal module imports, Third relative module imports
