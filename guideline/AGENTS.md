@@ -53,19 +53,19 @@ interface MyInterface {
 }
 ```
 
-- Explicitly declare `undefined` for optional parameters instead of using `?` syntax
+- Omit `undefined` and never use `null` for optional parameters when using the `?` modifier
 Example:
 ```ts
 // Do
 interface MyInterface {
   firstName: string
-  lastName: string | undefined
+  lastName?: string
 }
 
 // Don't
 interface MyInterface {
   firstName: string
-  lastName?: string
+  lastName?: string | undefined
 }
 ```
 
