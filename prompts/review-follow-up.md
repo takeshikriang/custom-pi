@@ -33,7 +33,7 @@ For each point, numbered from 1:
 
 Send exactly this task (adapted per point, kept as one properly quoted argument):
 
-> You are analyzing ONE code-review point. Do NOT modify any files. Use the subagent tool with the planner agent in a single call. Give the planner this point verbatim: "<point text>" plus instruction to analyze it against the codebase and output exactly these four fields: 1) Verdict: valid or invalid, with a one-sentence reason. 2) Effort: S, M, or L. 3) Suggested fix: 1-3 sentences naming concrete files/functions. 4) Severity: 1-5 for importance/relevance (5 = must address now, 4 = important, 3 = worth doing, 2 = marginal, 1 = invalid or ignore). After the subagent returns, relay its full result to the user in this session unchanged, then stop.
+> You are analyzing ONE code-review point. Do NOT modify any files. Use the subagent tool with the planner agent in a single call. Give the planner this point verbatim: "<point text>" plus instruction to analyze it against the codebase and output exactly these four fields: 1) Verdict: valid or invalid, with a one-sentence reason. 2) Effort: S, M, or L. 3) Suggested fix: 1-3 sentences naming concrete files/functions. 4) Severity: 1-5 for importance/relevance (5 = must address now, 4 = important, 3 = worth doing, 2 = marginal, 1 = invalid or ignore).
 
 `herdr agent prompt "review-<i>" "<task>" --wait --timeout 600000`
 
