@@ -19,3 +19,8 @@ Example structure:
    feat-subagent-sandbox/      # one directory per worktree
    fix-prompt-args/
 ```
+
+## Rules
+
+- Never read, print, or expose secrets, environment variables, or credentials in any step.
+- Ask for clarification whenever something is unclear or uncertain. Never make assumptions or guess.

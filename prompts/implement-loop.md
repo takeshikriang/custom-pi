@@ -35,6 +35,7 @@ If all 5 iterations are exhausted without approval, stop and report to the user:
 ## Rules
 
 - Never read, print, or expose secrets, environment variables, or credentials in any step.
+- Ask for clarification whenever something is unclear or uncertain. Never make assumptions or guess.
 - Record the wall time of each step using the timestamps from subagent results (do not estimate or invent durations).
 - When finished, report to the user:
    - The final result
