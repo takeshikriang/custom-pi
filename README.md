@@ -4,18 +4,11 @@ Delegate tasks to specialized subagents with isolated context windows.
 
 ## Installation
 
-From the Pi repository root (requires a checkout of the pi repo),
-symlink the files:
+1. From the Pi repository root (requires a checkout of the pi repo).
+Symlink the subagent: see the original [README](pi/packages/coding-agent/examples/extensions/subagent/README.md)
 
-```bash
-# Symlink and verify the extension (must be in a subdirectory with index.ts)
-mkdir -p ~/.pi/agent/extensions/subagent
-ln -sf "$PWD/packages/coding-agent/examples/extensions/subagent/index.ts" ~/.pi/agent/extensions/subagent/index.ts
-ln -sf "$PWD/packages/coding-agent/examples/extensions/subagent/agents.ts" ~/.pi/agent/extensions/subagent/agents.ts
-file ~/.pi/agent/extensions/subagent/*.ts
-```
 
-From this repository root, symlink the files:
+2. From this repository root, symlink the files:
 
 ```bash
 # Symlink and verify guideline
