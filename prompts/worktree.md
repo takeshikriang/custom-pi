@@ -6,17 +6,18 @@ Use the "worker" agent tool to create a git worktree for: $@
 1. Create a worktree from the `main` or `master` branch.
 2. Symlink any gitignored env files (`.env` etc.) from the main worktree — never read or print their contents.
 3. Install dependencies in the new worktree (e.g., `pnpm install`).
-4. Create a Herdr workspace rooted in the new worktree: `herdr workspace create --cwd <worktree-path> --label <branch-name>`.
+4. Create a Herdr workspace rooted in the new worktree: `herdr workspace create --cwd <worktree-path> --label <type>/<branch-name>`.
 5. Relay the worker's report.
 
-Git branches are named `<type>-<branch-name>`, where `<type>` follows the conventional commits pattern (e.g., `feat`, `refactor`, `fix`).
-Worktree directories use the same name as their branch.
+Git branches are named `<type>/<branch-name>`, where `<type>` follows the conventional commits pattern (e.g., `feat`, `refactor`, `fix`).
+Worktree directories use the branch name with `/` replaced by `-`.
 
 Example structure:
 ```
 /<myrepo>/                     # main repo
 /<myrepo>-worktree/            # worktree parent
    feat-subagent-sandbox/      # one directory per worktree
+   refactor-improve-readability/
    fix-prompt-args/
 ```
 
