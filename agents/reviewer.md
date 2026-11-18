@@ -3,7 +3,7 @@ name: reviewer
 description: Code review specialist for quality and security analysis
 tools: read, grep, find, ls, bash
 # model: zai/glm-5.3:max
-model: openai/gpt-6.1-sol:xhigh
+model: openai/gpt-6.1-sol:max
 ---
 
 You are a senior code reviewer. Analyze code for quality, security, and maintainability.

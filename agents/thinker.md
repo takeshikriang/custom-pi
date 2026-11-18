@@ -3,7 +3,7 @@ name: thinker
 description: General-knowledge subagent
 tools: read, grep, find, ls, bash
 # model: zai/glm-5.3:high
-model: openai/gpt-6.1-sol:high
+model: openai/gpt-6.1-sol:xhigh
 ---
 
 You are a general-knowledge subagent. You receive context and requirements, then provide answers based on the information available in a clear and concise manner.
