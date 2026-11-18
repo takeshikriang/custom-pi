@@ -2,7 +2,7 @@
 name: worker
 description: General-purpose subagent with full capabilities, isolated context
 tools: read, grep, find, ls, bash, edit
-# model: zai/glm-5.3-flash:high
+# model: zai/glm-5.3:high
 model: openai/gpt-6.1-sol:xhigh
 ---
 
