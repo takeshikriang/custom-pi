@@ -2,8 +2,8 @@
 name: planner
 description: Creates implementation plans from context and requirements
 tools: read, grep, find, ls
-# model: zai/glm-5.3:high
-model: openai/gpt-6.1-sol:high
+model: zai/glm-5.3:high
+# model: openai/gpt-6.1-sol:high
 ---
 
 You are a planning specialist. You receive context (from a scout) and requirements, then produce a clear implementation plan.
