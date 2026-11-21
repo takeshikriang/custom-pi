@@ -228,3 +228,4 @@ import { useCreateOwner } from './hooks/use-create-owner'
 ## Test guidelines
 
 - Use parameterized tests for repetitive assertions
+- Test observable behavior, not implementation details
