@@ -126,6 +126,71 @@ interface MyInterface {
 }
 ```
 
+- Avoid nested if conditions; use guard clauses (early returns) instead
+
+Example:
+```ts
+// Correct
+function processOrder(order: Order) {
+  if (!order.isValid) {
+    return
+  }
+  if (order.items.length === 0) {
+    return
+  }
+  process(order)
+}
+
+// Incorrect
+function processOrder(order: Order) {
+  if (order.isValid) {
+    if (order.items.length > 0) {
+      process(order)
+    }
+  }
+}
+```
+
+- Prefer switch case for complex nested conditions over if-else chains
+
+Example:
+```ts
+// Correct
+function getShippingCost(order: Order) {
+  switch (order.tier) {
+    case 'premium': {
+      return 0
+    }
+    case 'standard': {
+      return order.weight > 10 ? 15 : 5
+    }
+    case 'economy': {
+      return 5
+    }
+    default: {
+      return calculateDefaultCost(order)
+    }
+  }
+}
+
+// Incorrect
+function getShippingCost(order: Order) {
+  if (order.tier === 'premium') {
+    return 0
+  } else if (order.tier === 'standard') {
+    if (order.weight > 10) {
+      return 15
+    } else {
+      return 5
+    }
+  } else if (order.tier === 'economy') {
+    return 5
+  } else {
+    return calculateDefaultCost(order)
+  }
+}
+```
+
 - Pass only the values a function needs, not the whole containing object
 
 Example:
