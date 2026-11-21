@@ -126,6 +126,17 @@ interface MyInterface {
 }
 ```
 
+- Pass only the values a function needs, not the whole containing object
+
+Example:
+```ts
+// Correct
+createEnqueueEmailOtp(env.EMAIL_OTP_QUEUE)
+
+// Incorrect
+createEnqueueEmailOtp(env)
+```
+
 ## Import sorting guidelines
 
 - Group order: external module imports, then internal monorepo imports, then relative imports
