@@ -2,6 +2,12 @@
 
 Delegate tasks to specialized subagents with isolated context windows.
 
+## Index
+
+- [Subagent installation](#installation)
+- [Install skills for a specific directory](docs/skill-installation.md)
+- [Reference](#reference)
+
 ## Installation
 
 1. From the Pi repository root (requires a checkout of the pi repo).
